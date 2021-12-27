@@ -197,7 +197,7 @@ code {
 .nav {
   display: flex;
   background: #6200ee;
-  padding: 10px 20px;
+  padding: 0px 10px 0px 10px;
   align-items: center;
   justify-content: space-between;
 }
@@ -214,10 +214,6 @@ code {
 }
 nav #user-dp {
   height: 40px;
-}
-.nav .left-div img {
-  width: 60px;
-  margin-left: 25px;
 }
 nav .user {
   display: flex;
@@ -288,8 +284,8 @@ nav .nav-links ul li:hover {
   border: 1px solid #e0e0e0;
   z-index: 100;
   max-height: 452px;
-  overflow: scroll;
-  /* display: none; */
+  overflow-y: scroll;
+  display: none;
 }
 .search-results ul {
   list-style-type: none;
