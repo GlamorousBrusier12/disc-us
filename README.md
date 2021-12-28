@@ -1,2 +1,3 @@
-#Disc-Us
-##Social Media Application built using react
+# Disc-Us
+
+## Social Media Application built using react
