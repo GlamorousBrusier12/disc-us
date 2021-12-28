@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar(props) {
   return (
     <nav className="nav">
       <div className="left-div">
-        <h1 className="website-name">{"< Disc-Us/>"}</h1>
-        {/* <img src="https://cdn-icons-png.flaticon.com/512/1205/1205495.png" /> */}
+        <Link to="/">
+          <h1 className="website-name">{"< Disc-Us/>"}</h1>
+        </Link>
       </div>
       <div className="search-container">
         <img
@@ -45,9 +47,17 @@ function Navbar(props) {
         </div>
         <div className="nav-links">
           <ul>
-            <li>Log in</li>
-            <li>Log out</li>
-            <li>Register</li>
+            <li>
+              <Link to="/login">Log in</Link>
+            </li>
+
+            <li>
+              <Link to="/logout">Log out</Link>
+            </li>
+
+            <li>
+              <Link to="/register">Register</Link>
+            </li>
           </ul>
         </div>
       </div>

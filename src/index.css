@@ -194,6 +194,10 @@ code {
 }
 
 /* NAVBAR */
+nav .left-div a {
+  text-decoration: none;
+  color: #fff;
+}
 .nav {
   display: flex;
   background: #6200ee;

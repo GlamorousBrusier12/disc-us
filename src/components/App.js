@@ -1,16 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchPosts } from "../actions/posts";
-import { PostList } from "./";
+import { Home, Page404, Login } from "./";
 import PropTypes from "prop-types";
 import { Navbar } from "./";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
-const Home = (props) => {
-  console.log("Props: ", props);
-  return <h1>Home</h1>;
-};
-const Login = () => <h1>Login</h1>;
 const SignUp = () => <h1>SignUp</h1>;
 
 class App extends Component {
@@ -25,16 +19,16 @@ class App extends Component {
       <Router>
         <div>
           <Navbar />
-          {/* <PostList posts={posts} /> */}
           <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
           </ul>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Home posts={posts} />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="*" element={<Page404 />} />
           </Routes>
         </div>
       </Router>
